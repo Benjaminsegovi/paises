@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de paises</title>
+    <link rel="stylesheet" href="/static/Css/pag.css">
+</head>
+<body>
+    <!--
+    <div id="box1">
+    <div id="contenedor">
+        <div class="pais">
+            <h1>País</h1>
+        </div>
+            <div class="pais">
+                <p>Argentina</p>
+            </div>
+            <div class="pais">
+                <p>Brasil</p>
+            </div>
+            <div class="pais">
+                <p>Chile</p>
+            </div>
+            <div class="pais">
+                <p>Colombia</p>
+            </div>
+            <div class="pais">
+                <p>Costa Rica</p>
+            </div>
+            <div class="pais">
+                <p>Paraguay</p>
+            </div>
+            <div class="pais">
+                <p>Perú</p>
+            </div>
+    </div>
+    <div id="contenedor2">
+        <div class="capital">
+            <h1>Capital</h1>
+        </div>
+        <div class="capital">
+            <p>Buenos Aires</p>
+        </div>
+        <div class="capital">
+            <p>Brasilia</p>
+        </div>
+        <div class="capital">
+            <p>Santiago de Chile</p>
+        </div>
+        <div class="capital">
+            <p>Bogota</p>
+        </div>
+        <div class="capital">
+            <p>San josé</p>
+        </div>
+        <div class="capital">
+            <p>Asunción</p>
+        </div>
+        <div class="capital">
+            <p>Lima</p>
+        </div>
+    </div>
+</div>
+-->
+<style>
+    table {
+        width: 50%;
+        margin: 50px auto;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+</style>
+
+<h1 style="text-align: center;">Países y Capitales</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tabla in pais %}
+            <tr>
+                <td>{{ tabla.pais }}</td>
+                <td>{{ tabla.capital }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+<!--
+<h2>Pais Capital</h2>
+
+
+   <ul>
+    
+    {% for tablas in pais %}
+    <li>{{ tablas }}</li>
+    {% endfor %}
+
+   </ul>
+-->
+
+<!--
+   <ul>
+
+       {% for tabla in pais %}
+
+           <li>{{ tabla['pais'] }} - {{ tabla['capital'] }}</li>
+
+       {% endfor %}
+
+   </ul>
+-->
+    <script src="/static/Js/pag.js"></script>
+</body>
+</html>
